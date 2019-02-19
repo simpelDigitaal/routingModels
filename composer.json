@@ -1,0 +1,31 @@
+{
+    "name": "simpeldigitaal/routing-models",
+    "description": "Makes models routeable",
+    "require": {
+        "php": "^7.1",
+        "illuminate/database": "~5.7",
+        "illuminate/support": "~5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Niels Ballemans",
+            "email": "niels@simpeldigitaal.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SimpelDigitaal\\RoutingModels\\": "src",
+            "SimpelDigitaal\\RoutingModels\\Contract\\": "src\\contracts"
+
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SimpelDigitaal\\RoutingModels\\RoutingModelsServiceProvider"
+            ]
+        }
+    }
+}
