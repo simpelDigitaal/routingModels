@@ -25,6 +25,10 @@ class RoutingRecord extends Model
             'method' => $model->getRouteMethod(),
             'subject_id' => $model->getAttributeValue('id'),
             'subject_type' => $model->getMorphClass(),
+            //
+            'title' => $model->getRouteTitle(),
+            'meta_title' => $model->getMetaTitle(),
+            'meta_description' => $model->getMetaDescription(),
 
         ]);
         $routeRecord->save();
@@ -32,11 +36,17 @@ class RoutingRecord extends Model
         return $routeRecord;
     }
 
+    /**
+     * @return array
+     */
     public function getAction()
     {
         return [RouteResolver::class, 'resolve'];
     }
 
+    /**
+     * @return array
+     */
     public function getMethods()
     {
        return array_filter(explode(',', $this->method), 'strtoupper');

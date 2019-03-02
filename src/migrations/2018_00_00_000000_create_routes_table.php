@@ -18,6 +18,11 @@ class CreateRoutesTable extends Migration
             $table->string('method')->default('GET');
             $table->string('slug');
             $table->morphs('subject');
+
+            $table->string('title')->nullable()->default(null);
+            $table->string('meta_title', 100)->nullable()->default(null);
+            $table->text('meta_description')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
 
