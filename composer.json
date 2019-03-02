@@ -15,8 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "SimpelDigitaal\\RoutingModels\\": "src",
-            "SimpelDigitaal\\RoutingModels\\Contract\\": "src\\contracts"
+            "SimpelDigitaal\\RoutingModels\\": "src"
 
         }
     },

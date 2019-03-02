@@ -54,7 +54,7 @@ class RouteResolver extends Controller
      */
     protected function generateView(string $viewName)
     {
-        $template = __DIR__.'/views/template.blade.php';
+        $template = __DIR__.'/../views/template.blade.php';
         $applicationsViewPath = $this->resolveApplicationsViewPath();
 
         $segments = explode(ViewFinderInterface::HINT_PATH_DELIMITER, $viewName);

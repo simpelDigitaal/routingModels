@@ -15,15 +15,15 @@ class RoutingModelsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/routingmodels.php' => config_path('routingmodels.php'),
+            __DIR__.'/../config/routingmodels.php' => config_path('routingmodels.php'),
         ]);
 
 
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../migrations');
 
 
         $namespace = self::VIEW_NAME_SPACE;
-        $this->loadViewsFrom(__DIR__.'/views', $namespace);
+        $this->loadViewsFrom(__DIR__.'/../views', $namespace);
 
 
         if ($this->app->runningInConsole()) {
@@ -38,7 +38,7 @@ class RoutingModelsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/routingmodels.php', 'routingmodels'
+            __DIR__.'/../config/routingmodels.php', 'routingmodels'
         );
 
     }
